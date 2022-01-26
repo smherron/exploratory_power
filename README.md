@@ -5,7 +5,7 @@ Learning Repository</a> of electric power consumption in one household with a on
 
 ## Objectives
 
-The data was filtered to only contain the first 3 days of February. For these 3 days, the goal is to create exploratory graphs containing the following:\
+The data was filtered to only contain the first 3 days of February. For these 3 days, the goal is to create exploratory graphs containing the following:
 * A histogram of the Global Active Power 
 * A line graph of the Global Active Power 
 * A line graph of all 3 submetering values 
@@ -13,7 +13,7 @@ The data was filtered to only contain the first 3 days of February. For these 3 
 
 
 
-Note: The instruction say to examine a "2-day period in February, 2007" but did not specify which days. Also, 3 of the 4  graphs that are to be reproduced showed 3 days instead of 2. So I chose to look at the first 3 days of Feb 2007. 
+*Note:* The instruction say to examine a "2-day period in February, 2007" but did not specify which days. Also, 3 of the 4  graphs that are to be reproduced showed 3 days instead of 2. So I chose to look at the first 3 days of Feb 2007. 
 
 
 
