@@ -2,7 +2,7 @@
 
 ##  Overall goal is to examine how household energy usage varies over a 2 day
 ##  period in February 2007. Since it was unspecified as to which days, 
-##  I chose the first two days
+##  and the graphs actually show 3 days, I chose Feb 1-3, 2007.
 
 ## plot1: Create histogram of global active power
 
@@ -32,8 +32,8 @@ dataset$year <- year(dmy(dataset$Date))
 dataset$day <- day(dmy(dataset$Date))
 head(dataset)
 
-## Creating new set with only data from the first two days of Feb 2007
-feb <- subset(dataset, month == "Feb" & year == 2007 & day <= 2)
+## Creating new set with only data from the first 3 days of Feb 2007
+feb <- subset(dataset, month == "Feb" & year == 2007 & day <= 3)
 summary(feb)
 
 ## Create histogram and make into .png
