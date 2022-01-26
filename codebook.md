@@ -1,8 +1,8 @@
-From the [UCI website](https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption#):\
+From the [UCI website](https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption#):
 
 ### Description:
 
-"Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available."\
+"Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available."
 
 ### Variables:
 
