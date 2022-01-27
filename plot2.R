@@ -3,7 +3,7 @@
 ##  Overall goal is to examine how household energy usage varies over a 2 day
 ##  period in February, 2007
 
-## plots2 goal: graph global active power vs thu, fri, and sat
+## plot2 goal: graph global active power vs thu, fri, and sat
 
 ## Import file
 file_name <- "Electric Power Consumption.zip"
@@ -42,7 +42,8 @@ head(feb2)
 
 with(feb2, plot(hour, Global_active_power, type = "l",
                 ylab = "Global Active Power (kilowatts)",
-                xlab = ""))
+                xlab = "",
+                main = "Global Active Power"))
 dev.copy(png, file = "plot2.png")
 dev.off()
 
