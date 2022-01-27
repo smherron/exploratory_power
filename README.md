@@ -11,6 +11,7 @@ The data was filtered to only contain the first 3 days of February. For these 3 
 * A line graph of all 3 submetering values 
 * A multiple base plot with 4 line graphs of Global Active Power, Voltage, 3 submetering values, and Global Reactive Power
 
+*Note*: For some reason, the pngs that uploaded are all sequestered to the top left corner of the file so the sizing is off and super tiny.
 
 
 
