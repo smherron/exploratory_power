@@ -71,7 +71,7 @@ plot(feb$hour, feb$Global_reactive_power,
 mtext("February 1 - 2, 2007", outer = TRUE)
 
 ## Create png file
-dev.copy(png, file = "plot3.png")
+dev.copy(png, file = "plot4.png")
 dev.off()
 
 
