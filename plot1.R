@@ -2,7 +2,7 @@
 
 ##  Overall goal is to examine how household energy usage varies over a 2 day
 ##  period in February 2007. Since it was unspecified as to which days, 
-##  and the graphs actually show 3 days, I chose Feb 1-3, 2007.
+##  I chose Feb 1-2, 2007.
 
 ## plot1: Create histogram of global active power
 
@@ -20,27 +20,35 @@ dataset <- read.table("household_power_consumption.txt", sep = ";", header = TRU
 head(dataset)
 summary(dataset)
 
-dataset$Global_active_power <- as.numeric(dataset$Global_active_power)
-summary(dataset)
-
-
 ## Adding columns that separates the column "Date" by dotw, mth, yr, day
+## Change appropriate columns to be numeric.
 library(lubridate)
 dataset$wday <- wday(dmy(dataset$Date), label = TRUE, abbr = TRUE)
 dataset$month <- month(dmy(dataset$Date), label = TRUE, abbr = TRUE)
 dataset$year <- year(dmy(dataset$Date))
 dataset$day <- day(dmy(dataset$Date))
-head(dataset)
+dataset$Global_active_power <- as.numeric(dataset$Global_active_power)
+dataset$Global_reactive_power <- as.numeric(dataset$Global_reactive_power)
+dataset$Voltage <- as.numeric(dataset$Voltage)
+dataset$Global_intensity <- as.numeric(dataset$Global_intensity)
+dataset$Sub_metering_1 <- as.numeric(dataset$Sub_metering_1)
+dataset$Sub_metering_2 <- as.numeric(dataset$Sub_metering_2)
+dataset$Sub_metering_3 <- as.numeric(dataset$Sub_metering_3)
+summary(dataset)
 
-## Creating new set with only data from the first 3 days of Feb 2007
-feb <- subset(dataset, month == "Feb" & year == 2007 & day <= 3)
+## Creating new set with only data from Feb 1-2, 2007
+feb <- subset(dataset, month == "Feb" & year == 2007 & day <= 2)
+feb$hour <- strptime(paste(feb$Date, feb$Time, sep = " "), "%d/%m/%Y %H:%M:%S")
+head(feb)
 summary(feb)
 
-## Create histogram and make into .png
+## Create histogram with labels
 hist(feb$Global_active_power, 
      col = "red", 
      main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
+
+## Creating png file
 dev.copy(png, file = "plot1.png")
 dev.off()
 
